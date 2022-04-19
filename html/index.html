@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../scss/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <title>Random Quote Machine</title>
+  </head>
+  <body>
+    <div
+      id="page-container"
+      class="container-fluid d-flex flex-column justify-content-center text-center text-light"
+    >
+      <div
+        id="quote-box"
+        class="mx-sm-1 mx-md-2 mx-lg-3 mx-xl-4 mx-xxl-5 px-1 px-sm-2 px-md-3 px-lg-4 px-xl-5 d-flex flex-column align-items-center justify-content-center shadow-lg"
+      >
+        <h1 id="text" class="display-2 my-1"></h1>
+        <p id="author" class="display-5 my-1"></p>
+        <button id="new-quote" class="btn btn-primary mt-3 mb-2 shadow-sm">
+          New Quote
+        </button>
+
+        <div id="share-buttons">
+          <a
+            href="https:twitter.com/intent/tweet"
+            target="_blank"
+            id="tweet-quote"
+            class="btn btn-primary btn-sm shadow-sm"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Tweet this quote!"
+            ><i class="bi-twitter"></i
+          ></a>
+          <a
+            href="https:whatsapp.com"
+            id="share-quote-whatsapp"
+            class="btn btn-primary btn-sm shadow-sm"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Share this quote on WhatsApp!"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="../js/displayQuote.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+// colours
+
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary: $gray-900;
+
+$display-font-sizes: (
+  1: 3.5rem,
+  2: 3rem,
+  3: 2.5rem,
+  4: 2rem,
+  5: 1.5rem,
+  6: 1rem,
+);
+
+// UNCHANGED
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+// shadow
+$box-shadow-sm: 0 0.2rem 0.25rem rgba($black, 0.15);
+$box-shadow-lg: 0 0rem 4rem rgba($black, 0.175);
+
+// border radii
+$border-radius: 0.6rem;
+$border-radius-sm: 0.6rem;
+
+// button hover
+$btn-hover-bg-shade-amount: 30%;
+$btn-hover-bg-tint-amount: 30%;
+
+$btn-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+  border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out !default;
+
+// spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 5,
+  5: $spacer * 7.5,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+  font-size: 0.6rem;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    font-size: 0.7rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: 0.8rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    font-size: 0.9rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, "xl")) {
+    font-size: 1rem;
+  }
+  @media (min-width: map-get($grid-breakpoints, "xxl")) {
+    font-size: 1.1rem;
+  }
+}
+
+#author {
+  font-style: italic;
+}
+
+#page-container,
+#quote-box {
+  height: 100vh;
+}
+
+#page-container {
+  background-color: $gray-900;
+}
+
+#quote-box {
+  background-color: $gray-800;
+}
+
+#share-buttons .btn {
+  border-radius: 5rem;
+}
